@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurodh Prasain Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- Sidebar -->
+    <div class="fixed top-0 left-0 w-64 bg-[#0a1930] text-white h-full px-4 py-6">
+        <div class="flex flex-col items-center mb-8">
+            <!-- Profile -->
+            <img src="assets/profile.jpg" alt="Profile Photo" class="w-24 h-24 rounded-full mb-4 border-4 border-white">
+            <h2 class="text-xl font-semibold">Anurodh Prasain</h2>
+            <p class="text-sm">Developer</p>
+        </div>
+        <ul class="space-y-6">
+            <li><a href="#hero" class="block text-white hover:bg-sky-600 p-2 rounded">Home</a></li>
+            <li><a href="#about" class="block text-white hover:bg-sky-600 p-2 rounded">About</a></li>
+            <li><a href="#projects" class="block text-white hover:bg-sky-600 p-2 rounded">Projects</a></li>
+            <li><a href="#contact" class="block text-white hover:bg-sky-600 p-2 rounded">Contact</a></li>
+            <!-- Link to Resume -->
+            <li><a href="your-resume.pdf" class="block text-white hover:bg-sky-600 p-2 rounded"
+                    target="_blank">Resume</a></li>
+        </ul>
+    </div>
+
+    <div class="ml-64 p-8 space-y-16">
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center bg-sky-600 text-white px-6">
+            <div class="max-w-6xl flex justify-between items-center w-full">
+                <div class="text-center max-w-lg">
+                    <h1 class="text-5xl font-extrabold mb-4">Hi, I'm Anurodh Prasain.</h1>
+                    <p class="text-xl mb-6">A self-driven, passionate programmer who enjoys solving complex and
+                        real-world problems.</p>
+                    <div class="flex justify-center space-x-4 mb-6">
+                        <a href="https://github.com/Anurodh0011" class="text-2xl text-white hover:text-gray-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anurodh-prasain-b72157279/"
+                            class="text-2xl text-white hover:text-gray-300">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#about"
+                            class="bg-white text-sky-600 py-2 px-6 rounded-md hover:bg-sky-500 transition">Read More</a>
+                        <a href="#contact"
+                            class="bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-sky-600 transition">Contact
+                            Me</a>
+                    </div>
+                </div>
+                <!-- Right Side Image -->
+                <div class="flex justify-center items-center">
+                    <img src="assets/full1.jpg" alt="Anurodh Prasain"
+                        class="w-64 h-64 rounded-full shadow-lg border-4 border-white">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section with Skills and Education -->
+        <section id="about" class="bg-slate-800 text-center text-white py-12">
+            <div>
+                <h2 class="text-4xl font-semibold mb-6">About Me</h2>
+                <p class="text-lg mb-6 max-w-2xl mx-auto">I'm an aspiring web developer with a passion for building
+                    meaningful web applications.</p>
+            </div>
+
+            <!-- Education and Skills Section -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Education Section -->
+                <div class="bg-white text-slate-900 p-8 rounded-lg shadow-lg mb-8 md:mb-0">
+                    <h3 class="text-3xl font-semibold mb-6 text-center">Education</h3>
+                    <p class="text-lg mb-6">Bachelor’s degree in Bsc. Hons. Computing (2023 - Present) at London
+                        Metropolitian University.
+                    </p>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="bg-white text-slate-900 p-8 rounded-lg shadow-lg">
+                    <h3 class="text-3xl font-semibold mb-6 text-center">Skills</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">HTML</div>
+                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">CSS</div>
+                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">JavaScript</div>
+                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">React</div>
+                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">Node.js</div>
+                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">Git</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects"
+            class="h-screen flex items-center justify-center bg-white text-center text-gray-900 py-12">
+            <div>
+                <h2 class="text-4xl font-semibold mb-6">Projects</h2>
+                <p class="text-lg mb-6 max-w-2xl mx-auto">Here are some of the projects I've worked on:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="bg-sky-600 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Project One</h3>
+                        <p class="text-lg mb-4 text-white">A full-stack e-commerce web application.</p>
+                        <a href="https://github.com" class="text-white hover:underline">View on GitHub</a>
+                    </div>
+                    <div
+                        class="bg-sky-600 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Project Two</h3>
+                        <p class="text-lg mb-4 text-white">A dynamic to-do list application using React.</p>
+                        <a href="https://github.com" class="text-white hover:underline">View on GitHub</a>
+                    </div>
+                    <div
+                        class="bg-sky-600 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Project Three</h3>
+                        <p class="text-lg mb-4 text-white">A personal blog built with Node.js and Express.</p>
+                        <a href="https://github.com" class="text-white hover:underline">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="h-auto bg-[#0a1930] text-white py-20">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+
+                <!-- Left Side: Contact Form -->
+                <div class="w-full md:w-1/2 p-6 bg-white rounded-lg shadow-lg text-slate-900 max-w-lg mx-auto">
+                    <h2 class="text-3xl font-bold text-center text-sky-600 mb-6">Contact Me</h2>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-lg font-medium">Your Name</label>
+                            <input type="text" id="name" placeholder="Anurodh Prasain"
+                                class="w-full p-4 mt-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-600"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-lg font-medium">Your Email</label>
+                            <input type="email" id="email" placeholder="youremail@example.com"
+                                class="w-full p-4 mt-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-600"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-lg font-medium">Your Message</label>
+                            <textarea id="message" placeholder="Write your message here..."
+                                class="w-full p-4 mt-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-600"
+                                rows="4" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full py-3 bg-sky-600 text-white text-lg rounded-md hover:bg-sky-500 transition duration-300">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <!-- Right Side: Alternative Contact Information -->
+                <div class="w-full md:w-1/2 mt-12 md:mt-0 text-center md:text-left">
+                    <h3 class="text-3xl font-semibold mb-6 text-sky-600">Alternative Contact</h3>
+                    <p class="text-lg mb-6">If you prefer, you can reach me through the following channels:</p>
+                    <ul class="space-y-6 text-xl">
+                        <li><i class="fas fa-phone-alt text-sky-600"></i> <a href="tel:+1234567890"
+                                class="hover:underline">+977 9825908570</a></li>
+                        <li><i class="fas fa-envelope text-sky-600"></i> <a href="mailto:anurodhprasain0011@gmail.com"
+                                class="hover:underline">anurodhprasain0011@gmail.com</a></li>
+                        <li><i class="fab fa-linkedin text-sky-600"></i> <a
+                                href="https://www.linkedin.com/in/anurodh-prasain-b72157279/" target="_blank"
+                                class="hover:underline">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer Section -->
+        <footer class="bg-[#0a1930] text-white py-6">
+            <div class="text-center">
+                <p>&copy; 2025 Anurodh Prasain. All Rights Reserved.</p>
+                <div class="mt-4">
+                    <a href="https://github.com/Anurodh0011" class="text-white hover:text-sky-600 mx-4">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/anurodh-prasain-b72157279/"
+                        class="text-white hover:text-sky-600 mx-4">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:anurodhprasain0011@gmail.com" class="text-white hover:text-sky-600 mx-4">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
