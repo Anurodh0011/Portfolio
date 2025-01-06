@@ -1,210 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anurodh Prasain Portfolio</title>
+    <meta name="description"
+        content="Anurodh Prasain's portfolio showcasing web development skills and projects using React, NextJS, and more.">
+    <meta name="keywords"
+        content="Anurodh Prasain, web developer, portfolio, React, NextJS, JavaScript, full-stack developer">
+    <meta name="author" content="Anurodh Prasain">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Open Graph tags for better social sharing -->
+    <meta property="og:title" content="Anurodh Prasain - Web Developer Portfolio">
+    <meta property="og:description" content="Portfolio showcasing web development projects and skills">
+    <meta property="og:type" content="website">
 </head>
 
 <body class="bg-white text-gray-900">
+    <!-- Mobile Navigation Toggle -->
+    <button id="menuToggle" class="fixed top-4 right-4 z-50 p-2 bg-sky-600 rounded-lg text-white md:hidden">
+        <i class="fas fa-bars"></i>
+    </button>
 
-    <!-- Sidebar -->
-    <div class="fixed top-0 left-0 w-64 bg-[#0a1930] text-white h-full px-4 py-6">
+    <!-- Sidebar - now responsive -->
+    <div id="sidebar"
+        class="fixed top-0 left-0 w-64 bg-[#0a1930] text-white h-full px-4 py-6 transform -translate-x-full md:translate-x-0 transition-transform duration-200 ease-in-out z-40">
         <div class="flex flex-col items-center mb-8">
-            <!-- Profile -->
-            <img src="assets/profile.jpg" alt="Profile Photo" class="w-24 h-24 rounded-full mb-4 border-4 border-white">
+            <img src="assets/profile.jpg" alt="Profile photo of Anurodh Prasain"
+                class="w-24 h-24 rounded-full mb-4 border-4 border-white">
             <h2 class="text-xl font-semibold">Anurodh Prasain</h2>
-            <p class="text-sm">Developer</p>
+            <p class="text-sm">Full-Stack Developer</p>
         </div>
-        <ul class="space-y-6">
-            <li><a href="#hero" class="block text-white hover:bg-sky-600 p-2 rounded">Home</a></li>
-            <li><a href="#about" class="block text-white hover:bg-sky-600 p-2 rounded">About</a></li>
-            <li><a href="#projects" class="block text-white hover:bg-sky-600 p-2 rounded">Projects</a></li>
-            <li><a href="#contact" class="block text-white hover:bg-sky-600 p-2 rounded">Contact</a></li>
-            <!-- Link to Resume -->
-            <li><a href="your-resume.pdf" class="block text-white hover:bg-sky-600 p-2 rounded"
-                    target="_blank">Resume</a></li>
-        </ul>
+        <nav>
+            <ul class="space-y-6">
+                <li><a href="#hero"
+                        class="block text-white hover:bg-sky-600 p-2 rounded transition duration-300">Home</a></li>
+                <li><a href="#about"
+                        class="block text-white hover:bg-sky-600 p-2 rounded transition duration-300">About</a></li>
+                <li><a href="#projects"
+                        class="block text-white hover:bg-sky-600 p-2 rounded transition duration-300">Projects</a></li>
+                <li><a href="#contact"
+                        class="block text-white hover:bg-sky-600 p-2 rounded transition duration-300">Contact</a></li>
+                <li><a href="your-resume.pdf"
+                        class="block text-white hover:bg-sky-600 p-2 rounded transition duration-300" target="_blank"
+                        rel="noopener noreferrer">Resume</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <div class="ml-64 p-8 space-y-16">
-        <!-- Hero Section -->
-        <section id="hero" class="h-screen flex items-center justify-center bg-sky-600 text-white px-6">
-            <div class="max-w-6xl flex justify-between items-center w-full">
-                <div class="text-center max-w-lg">
-                    <h1 class="text-5xl font-extrabold mb-4">Hi, I'm Anurodh Prasain.</h1>
-                    <p class="text-xl mb-6">A self-driven, passionate programmer who enjoys solving complex and
-                        real-world problems.</p>
-                    <div class="flex justify-center space-x-4 mb-6">
-                        <a href="https://github.com/Anurodh0011" class="text-2xl text-white hover:text-gray-300">
+    <div class="ml-0 md:ml-64 transition-margin duration-200">
+        <!-- Hero Section - Enhanced with animations -->
+        <section id="hero" class="min-h-screen flex items-center justify-center bg-sky-600 text-white px-4 md:px-6">
+            <div class="max-w-6xl flex flex-col md:flex-row justify-between items-center w-full gap-8">
+                <div class="text-center md:text-left max-w-lg">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 animate-fade-in">Hi, I'm Anurodh Prasain.</h1>
+                    <p class="text-lg md:text-xl mb-6">A self-driven, passionate programmer who enjoys solving complex
+                        and real-world problems.</p>
+                    <div class="flex justify-center md:justify-start space-x-4 mb-6">
+                        <a href="https://github.com/Anurodh0011"
+                            class="text-2xl text-white hover:text-gray-300 transition duration-300"
+                            aria-label="GitHub Profile">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/anurodh-prasain-b72157279/"
-                            class="text-2xl text-white hover:text-gray-300">
+                            class="text-2xl text-white hover:text-gray-300 transition duration-300"
+                            aria-label="LinkedIn Profile">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
-                    <div class="flex justify-center space-x-4">
+                    <div class="flex justify-center md:justify-start space-x-4">
                         <a href="#about"
-                            class="bg-white text-sky-600 py-2 px-6 rounded-md hover:bg-sky-500 transition">Read More</a>
+                            class="bg-white text-sky-600 py-2 px-6 rounded-md hover:bg-sky-100 transition duration-300">Read
+                            More</a>
                         <a href="#contact"
-                            class="bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-sky-600 transition">Contact
+                            class="bg-transparent border-2 border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-sky-600 transition duration-300">Contact
                             Me</a>
                     </div>
                 </div>
-                <!-- Right Side Image -->
                 <div class="flex justify-center items-center">
-                    <img src="assets/full3.jpg" alt="Anurodh Prasain"
-                        class="w-64 h-64 rounded-full shadow-lg border-4 border-white">
+                    <img src="assets/full3.jpg" alt="Professional photo of Anurodh Prasain"
+                        class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-lg border-4 border-white">
                 </div>
             </div>
         </section>
 
-        <!-- About Me Section with Skills and Education -->
-        <section id="about" class="bg-slate-800 text-center text-white py-12">
-            <div>
-                <h2 class="text-4xl font-semibold mb-6">About Me</h2>
-                <p class="text-lg mb-6 max-w-2xl mx-auto">I'm an aspiring web developer with a passion for building
-                    meaningful web applications.</p>
-            </div>
+        <!-- About Section - Enhanced with animations and responsive design -->
+        <section id="about" class="bg-slate-800 text-white py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-semibold mb-6 text-center">About Me</h2>
+                <p class="text-lg mb-12 max-w-2xl mx-auto text-center">I'm a passionate web developer specializing in
+                    building responsive, user-friendly applications with modern technologies.</p>
 
-            <!-- Education and Skills Section -->
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <!-- Education Section -->
-                <div class="bg-white text-slate-900 p-8 rounded-lg shadow-lg mb-8 md:mb-0">
-                    <h3 class="text-3xl font-semibold mb-6 text-center">Education</h3>
-                    <p class="text-lg mb-6">Bachelor’s degree in Bsc. Hons. Computing (2023 - Present) at London
-                        Metropolitian University.
-                    </p>
-                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div
+                        class="bg-white text-slate-900 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+                        <h3 class="text-3xl font-semibold mb-6 text-center">Education</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-sky-600 pl-4">
+                                <h4 class="text-xl font-semibold">BSc. Hons. Computing</h4>
+                                <p class="text-gray-600">London Metropolitan University</p>
+                                <p class="text-gray-600">2023 - Present</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Skills Section -->
-                <div class="bg-white text-slate-900 p-8 rounded-lg shadow-lg">
-                    <h3 class="text-3xl font-semibold mb-6 text-center">Skills</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">HTML</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">CSS</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">TailwindCSS</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">JavaScript</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">React</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">NextJS</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">MySQL</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">Oracle</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">Python</div>
-                        <div class="bg-sky-600 text-white p-4 rounded-lg shadow-lg text-xs md:text-sm">Java</div>
+                    <div class="bg-white text-slate-900 p-8 rounded-lg shadow-lg">
+                        <h3 class="text-3xl font-semibold mb-6 text-center">Skills</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                HTML5</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                CSS3</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                TailwindCSS</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                JavaScript</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                React</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                NextJS</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                MySQL</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                Oracle</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                Python</div>
+                            <div
+                                class="bg-sky-600 text-white p-3 rounded-lg shadow text-center transform hover:scale-105 transition duration-300">
+                                Java</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects"
-            class="h-screen flex items-center justify-center bg-white text-center text-gray-900 py-12">
-            <div>
-                <h2 class="text-4xl font-semibold mb-6">Projects</h2>
-                <p class="text-lg mb-6 max-w-2xl mx-auto">Here are some of the projects I've worked on:</p>
+        <!-- Projects Section - Enhanced with better card design -->
+        <section id="projects" class="py-16 px-4 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-semibold mb-6 text-center">Projects</h2>
+                <p class="text-lg mb-12 max-w-2xl mx-auto text-center">Here are some of my recent projects:</p>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div
-                        class="bg-sky-600 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Printera Website</h3>
-                        <p class="text-lg mb-4 text-white">A simple e-commerce web application using HTML, CSS and
-                            JavaScript.</p>
-                        <a href="https://github.com/Anurodh0011/Printera-Website"
-                            class="text-white hover:underline">View on GitHub</a>
+                        class="bg-sky-600 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <div class="p-6 text-white">
+                            <h3 class="text-2xl font-semibold mb-4">Printera Website</h3>
+                            <p class="text-lg mb-4">An e-commerce web application built with HTML, CSS, and JavaScript.
+                            </p>
+                            <div class="flex gap-2 mb-4">
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">HTML</span>
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">CSS</span>
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/Anurodh0011/Printera-Website"
+                                class="inline-block bg-white text-sky-600 px-4 py-2 rounded hover:bg-sky-100 transition duration-300">View
+                                Project</a>
+                        </div>
                     </div>
+
                     <div
-                        class="bg-sky-600 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Rock-Paper-Scissor</h3>
-                        <p class="text-lg mb-4 text-white">A dynamic Rock-Paper-Scissor application using React and
-                            NextJS.</p>
-                        <a href="https://github.com/Anurodh0011/rock-paper-scissor"
-                            class="text-white hover:underline">View on GitHub</a>
+                        class="bg-sky-600 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <div class="p-6 text-white">
+                            <h3 class="text-2xl font-semibold mb-4">Rock-Paper-Scissor</h3>
+                            <p class="text-lg mb-4">A dynamic game application built with React and NextJS.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">React</span>
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">NextJS</span>
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">TailwindCSS</span>
+                            </div>
+                            <a href="https://github.com/Anurodh0011/rock-paper-scissor"
+                                class="inline-block bg-white text-sky-600 px-4 py-2 rounded hover:bg-sky-100 transition duration-300">View
+                                Project</a>
+                        </div>
                     </div>
+
                     <div
-                        class="bg-sky-600 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
-                        <h3 class="text-2xl font-semibold mb-4 text-white">Simple Calculator</h3>
-                        <p class="text-lg mb-4 text-white">A dynamic Calculator application using React and NextJS.</p>
-                        <a href="https://github.com/Anurodh0011/Calculator" class="text-white hover:underline">View on
-                            GitHub</a>
+                        class="bg-sky-600 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <div class="p-6 text-white">
+                            <h3 class="text-2xl font-semibold mb-4">Simple Calculator</h3>
+                            <p class="text-lg mb-4">A dynamic calculator application built with React and NextJS.</p>
+                            <div class="flex gap-2 mb-4">
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">React</span>
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">NextJS</span>
+                                <span class="bg-sky-700 px-2 py-1 rounded text-sm">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/Anurodh0011/Calculator"
+                                class="inline-block bg-white text-sky-600 px-4 py-2 rounded hover:bg-sky-100 transition duration-300">View
+                                Project</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="h-auto bg-[#0a1930] text-white py-20">
-            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+        <!-- Contact Section - Enhanced with form validation -->
+        <section id="contact" class="bg-[#0a1930] text-white py-20 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="w-full md:w-1/2">
+                        <div class="bg-white rounded-lg shadow-lg p-8 text-slate-900">
+                            <h2 class="text-3xl font-bold text-center text-sky-600 mb-6">Contact Me</h2>
+                            <form id="contactForm" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-lg font-medium mb-2">Name</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
+                                        placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-lg font-medium mb-2">Email</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
+                                        placeholder="your.email@example.com">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-lg font-medium mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" required
+                                        class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-600 focus:border-transparent"
+                                        placeholder="Your message"></textarea>
+                                </div>
+                                <button type="submit" class="w-full py-3 bg-sky-600
+                                class=" w-full py-3 bg-sky-600 text-white text-lg rounded-md hover:bg-sky-500
+                                    transition duration-300">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
 
-                <!-- Left Side: Contact Form -->
-                <div class="w-full md:w-1/2 p-6 bg-white rounded-lg shadow-lg text-slate-900 max-w-lg mx-auto">
-                    <h2 class="text-3xl font-bold text-center text-sky-600 mb-6">Contact Me</h2>
-                    <form action="#" method="POST">
-                        <div class="mb-4">
-                            <label for="name" class="block text-lg font-medium">Your Name</label>
-                            <input type="text" id="name" placeholder="Anurodh Prasain"
-                                class="w-full p-4 mt-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-600"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-lg font-medium">Your Email</label>
-                            <input type="email" id="email" placeholder="youremail@example.com"
-                                class="w-full p-4 mt-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-600"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-lg font-medium">Your Message</label>
-                            <textarea id="message" placeholder="Write your message here..."
-                                class="w-full p-4 mt-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-600"
-                                rows="4" required></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full py-3 bg-sky-600 text-white text-lg rounded-md hover:bg-sky-500 transition duration-300">Send
-                            Message</button>
-                    </form>
-                </div>
-
-                <!-- Right Side: Alternative Contact Information -->
-                <div class="w-full md:w-1/2 mt-12 md:mt-0 text-center md:text-left">
-                    <h3 class="text-3xl font-semibold mb-6 text-sky-600">Alternative Contact</h3>
-                    <p class="text-lg mb-6">If you prefer, you can reach me through the following channels:</p>
-                    <ul class="space-y-6 text-xl">
-                        <li><i class="fas fa-phone-alt text-sky-600"></i> <a href="tel:+1234567890"
-                                class="hover:underline">+977 9825908570</a></li>
-                        <li><i class="fas fa-envelope text-sky-600"></i> <a href="mailto:anurodhprasain0011@gmail.com"
-                                class="hover:underline">anurodhprasain0011@gmail.com</a></li>
-                        <li><i class="fab fa-linkedin text-sky-600"></i> <a
-                                href="https://www.linkedin.com/in/anurodh-prasain-b72157279/" target="_blank"
-                                class="hover:underline">LinkedIn</a></li>
-                    </ul>
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-3xl font-semibold mb-6 text-sky-600">Let's Connect</h3>
+                        <p class="text-lg mb-8">Feel free to reach out through any of these channels:</p>
+                        <ul class="space-y-6">
+                            <li class="flex items-center space-x-4">
+                                <i class="fas fa-phone-alt text-sky-600 text-xl"></i>
+                                <a href="tel:+9779825908570"
+                                    class="text-lg hover:text-sky-400 transition duration-300">+977 9825908570</a>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i class="fas fa-envelope text-sky-600 text-xl"></i>
+                                <a href="mailto:anurodhprasain0011@gmail.com"
+                                    class="text-lg hover:text-sky-400 transition duration-300">anurodhprasain0011@gmail.com</a>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i class="fab fa-linkedin text-sky-600 text-xl"></i>
+                                <a href="https://www.linkedin.com/in/anurodh-prasain-b72157279/" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-lg hover:text-sky-400 transition duration-300">LinkedIn Profile</a>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i class="fab fa-github text-sky-600 text-xl"></i>
+                                <a href="https://github.com/Anurodh0011" target="_blank" rel="noopener noreferrer"
+                                    class="text-lg hover:text-sky-400 transition duration-300">GitHub Profile</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-
-        <!-- Footer Section -->
-        <footer class="bg-[#0a1930] text-white py-6">
-            <div class="text-center">
-                <p>&copy; 2025 Anurodh Prasain. All Rights Reserved.</p>
-                <div class="mt-4">
-                    <a href="https://github.com/Anurodh0011" class="text-white hover:text-sky-600 mx-4">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/anurodh-prasain-b72157279/"
-                        class="text-white hover:text-sky-600 mx-4">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:anurodhprasain0011@gmail.com" class="text-white hover:text-sky-600 mx-4">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+        <!-- Footer -->
+        <footer class="bg-[#0a1930] text-white py-8">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-8">
+                    <div class="flex justify-center space-x-6 mb-4">
+                        <a href="https://github.com/Anurodh0011"
+                            class="text-2xl hover:text-sky-400 transition duration-300" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anurodh-prasain-b72157279/"
+                            class="text-2xl hover:text-sky-400 transition duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:anurodhprasain0011@gmail.com"
+                            class="text-2xl hover:text-sky-400 transition duration-300" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <p>&copy; 2025 Anurodh Prasain. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
     </div>
+
+    <!-- Mobile menu JavaScript -->
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            const sidebar = document.getElementById('sidebar');
+            const currentTransform = sidebar.style.transform;
+
+            if (currentTransform === 'translateX(0px)') {
+                sidebar.style.transform = 'translateX(-100%)';
+            } else {
+                sidebar.style.transform = 'translateX(0)';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // Only on mobile
+                    document.getElementById('sidebar').style.transform = 'translateX(-100%)';
+                }
+            });
+        });
+
+        // Form validation and submission
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Basic form validation
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Here you would typically send the form data to your server
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
 </body>
 
 </html>
